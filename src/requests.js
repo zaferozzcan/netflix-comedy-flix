@@ -1,4 +1,5 @@
-const api_key = "";
+import "dotenv";
+const api_key = `${process.env.REACT_APP_TMDM_API_KEY}`;
 
 console.log("APIKEY", api_key);
 
