@@ -1,9 +1,15 @@
-function App() {
+import React from "react";
+import Row from "./components/rows/Row";
+import requests from "./requests";
+
+export default function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
+    <div>
+      <Row
+        title={"Netflix Originals"}
+        fetchUrl={requests.fetchNetflixOriginals}
+      />
+      <Row title={"Trending Now"} fetchUrl={requests.fetchTrending} />
     </div>
   );
 }
-
-export default App;
