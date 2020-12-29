@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../../styles/Banner.css";
 import axiosInstance from "../../axios";
 import requests from "../../requests";
 
@@ -16,6 +17,25 @@ export default function Banner() {
     }
     getMovie();
   }, []);
-  console.log("randim movie", movie);
-  return <header></header>;
+  //   console.log("randim movie", movie);
+  return (
+    <header
+      className="banner"
+      style={{
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+        backgroundPosition: "center center",
+      }}
+    >
+      <div className="banner_contents">
+        <h1 className="banner_title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
+        <div className="banner_buttons">
+          <button className="banner_button">Play</button>
+          <button className="banner_button">My List</button>
+        </div>
+        <h1 className="banner_decs">{movie?.overview}</h1>
+      </div>
+    </header>
+  );
 }
