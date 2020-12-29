@@ -35,6 +35,7 @@ export default function Banner() {
           <button className="banner_button">My List</button>
         </div>
         <h1 className="banner_decs">{movie?.overview}</h1>
+        <div className="banner_fadeBottom"></div>
       </div>
     </header>
   );

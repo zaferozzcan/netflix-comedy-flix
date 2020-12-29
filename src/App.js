@@ -5,7 +5,7 @@ import requests from "./requests";
 
 export default function App() {
   return (
-    <div>
+    <div className="app">
       <Banner />
       <Row
         title={"Netflix Originals"}

@@ -1,3 +1,6 @@
+.app {
+  background-color: #111;
+}
 .banner {
   color: white;
   object-fit: contain;
@@ -22,4 +25,15 @@
   padding-top: 1rem;
   font-size: 0.8rem;
   max-width: 360px;
+}
+
+.banner_fadeBottom {
+  margin-top: 3rem;
+  height: 7.4rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
 }
