@@ -1,5 +1,5 @@
 import "dotenv";
-const api_key = `${process.env.REACT_APP_TMDM_API_KEY}`;
+const api_key = "1be88e5d1e9e49e9c06a122dcb508e12";
 
 const requests = {
   fetchTrending: `/trending/all/week?api_key=${api_key}&language=en-US`,
