@@ -1,11 +1,13 @@
 import React from "react";
 import Row from "./components/rows/Row";
 import Banner from "./components/banner/Banner";
+import Navbar from "./components/navbar/Navbar";
 import requests from "./requests";
 
 export default function App() {
   return (
     <div className="app">
+      <Navbar />
       <Banner />
       <Row
         title={"Netflix Originals"}
