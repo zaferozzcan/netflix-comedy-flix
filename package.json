@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://api.themoviedb.org/3",
+  "proxy": "https://image.tmdb.org/t/p/original/",
   "devDependencies": {
     "dotenv": "^8.2.0"
   },
