@@ -1,5 +1,15 @@
+.row {
+  margin-left: 20px;
+}
 .row_posters {
   display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none;
 }
 
 .row_poster {
@@ -11,5 +21,15 @@
 
 .row_poster:hover {
   transform: scale(1.1);
+  transition: transform 450ms;
+}
+
+.row_largerPoster {
+  max-height: 250px;
+  margin-right: 10px;
+}
+
+.row_largerPoster:hover {
+  transform: scale(1.15);
   transition: transform 450ms;
 }

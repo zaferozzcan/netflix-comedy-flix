@@ -4,7 +4,7 @@ import "../../styles/Row.css";
 
 const image_base_url = "https://image.tmdb.org/t/p/original/";
 
-export default function Row({ title, fetchUrl }) {
+export default function Row({ title, fetchUrl, isLargerRow }) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -15,6 +15,7 @@ export default function Row({ title, fetchUrl }) {
     }
     getMovies();
   }, [fetchUrl]);
+  console.log(movies[0]);
   return (
     <div className="row">
       <h2>{title}</h2>
@@ -22,9 +23,11 @@ export default function Row({ title, fetchUrl }) {
         {movies.map((movie, index) => {
           return (
             <img
-              className="row_poster"
-              key={index}
-              src={image_base_url + movie.poster_path}
+              className={isLargerRow ? "row_largerPoster" : "row_poster"}
+              key={movie.id}
+              src={`${image_base_url}${
+                isLargerRow ? movie.poster_path : movie.backdrop_path
+              }`}
               alt={movie.name}
             ></img>
           );
