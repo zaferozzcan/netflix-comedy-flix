@@ -8,14 +8,21 @@ export default function Row({ title, fetchUrl }) {
   useEffect(() => {
     async function getMovies() {
       const request = await axiosInstance.get(fetchUrl);
-      console.log("req", request);
-      return request;
+      //   console.log("req", request.data.results);
+      setMovies(request.data.results);
     }
     getMovies();
-  }, []);
+  }, [fetchUrl]);
   return (
-    <div>
+    <div className="row">
       <h2>{title}</h2>
+      <div className="row_posters">
+        {movies.map((movie, index) => {
+          return (
+            <img key={index} src={movie.poster_path} alt={movie.name}></img>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -1,8 +1,6 @@
 import "dotenv";
 const api_key = `${process.env.REACT_APP_TMDM_API_KEY}`;
 
-console.log("APIKEY", api_key);
-
 const requests = {
   fetchTrending: `/trending/all/week?api_key=${api_key}&language=en-US`,
   fetchNetflixOriginals: `discover/tv?api_key=${api_key}&with_networks=213`,
