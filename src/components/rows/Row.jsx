@@ -15,7 +15,7 @@ export default function Row({ title, fetchUrl, isLargerRow }) {
     }
     getMovies();
   }, [fetchUrl]);
-  console.log(movies[0]);
+  //   console.log(movies[0]);
   return (
     <div className="row">
       <h2>{title}</h2>
