@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axiosInstance from "../../axios";
 import "../../styles/Row.css";
 
+const image_base_url = "https://image.tmdb.org/t/p/original/";
+
 export default function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
 
@@ -19,7 +21,12 @@ export default function Row({ title, fetchUrl }) {
       <div className="row_posters">
         {movies.map((movie, index) => {
           return (
-            <img key={index} src={movie.poster_path} alt={movie.name}></img>
+            <img
+              className="row_poster"
+              key={index}
+              src={image_base_url + movie.poster_path}
+              alt={movie.name}
+            ></img>
           );
         })}
       </div>
