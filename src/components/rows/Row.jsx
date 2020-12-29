@@ -13,7 +13,10 @@ export default function Row({ title, fetchUrl, isLargerRow }) {
   useEffect(() => {
     async function getMovies() {
       const config = {
-        headers: { "Access-Control-Allow-Origin": "*" },
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/plain",
+        },
       };
       const request = await axiosInstance.get(fetchUrl, config);
       //   console.log("req", request.data.results);
