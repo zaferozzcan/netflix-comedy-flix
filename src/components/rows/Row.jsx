@@ -18,7 +18,7 @@ export default function Row({ title, fetchUrl, isLargerRow }) {
     }
     getMovies();
   }, [fetchUrl]);
-  //   console.log(movies[0]);
+  // console.log(fetchUrl);
   const opts = {
     height: "390",
     width: "100%",
