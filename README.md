@@ -2,7 +2,7 @@
 
 Live site: https://netflix-clone-joy-flix.herokuapp.com/
 
-Comedy flix is a Netflix clone,a user can click see the different miviee, and can click on a moc=vie to watch its trailer. This application consumes a third party API to get movie data, as well as npm packages to get their treilers from YouTube.
+Comedy flix is a Netflix clone. A user can click to see the different movies and click on a film to watch its trailer. This application consumes a third party API to get movie data and npm packages to reach their YouTube trailers.
 
 # List of Technologies:
 
